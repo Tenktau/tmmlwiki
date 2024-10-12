@@ -1,0 +1,54 @@
+<TMU|<tuple|1.0.5|1.2.9.5>>
+
+<style|<tuple|generic|chinese>>
+
+<\body>
+  <doc-data|<doc-title|斐波那契数列>>
+
+  <\definition>
+    斐波那契数列是一个数列，其中每个数字是前两个数字的和，通常形式开始为：1, 1, 接着是后面每一项都是前两项的和。
+  </definition>
+
+  <\definition>
+    斐波那契数列是一个数列，第<math|n>项的值是<math|F<around*|(|n|)>>：
+
+    <\equation*>
+      F<around*|(|n|)>=<choice|<tformat|<table|<row|<cell|F<around*|(|n-1|)>+F<around*|(|n-2|)>>|<cell|,n\<geqslant\>3>>|<row|<cell|1>|<cell|,n=2>>|<row|<cell|1>|<cell|,n=1>>>>>
+    </equation*>
+  </definition>
+
+  <\definition>
+    斐波那契数列是一个数列，第<math|n>项的值是<math|F<around*|(|n|)>>，<math|F<around*|(|n|)>>的计算公式为：
+
+    <\equation*>
+      F<around*|(|n|)>=<frac|1|<sqrt|5>><around*|[|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>|]>
+    </equation*>
+
+    该公式是斐波那契数列的通项公式，也称为斐波那契数列的Binet公式。
+  </definition>
+
+  \;
+
+  <\definition>
+    定义斐波那契数列的矩阵 <math|<with|math-font-series|bold|F>> 为：
+
+    <\equation*>
+      <with|math-font-series|bold|F>=<around*|(|<tabular|<tformat|<cwith|1|-1|1|1|cell-halign|c>|<cwith|1|-1|2|2|cell-halign|c>|<table|<row|<cell|<with|math-level|0|math-display|false|1>>|<cell|<with|math-level|0|math-display|false|1>>>|<row|<cell|<with|math-level|0|math-display|false|1>>|<cell|<with|math-level|0|math-display|false|0>>>>>>|)>
+    </equation*>
+
+    斐波那契数列的第 <math|n> 项可以表示为：
+
+    <\equation*>
+      <around*|(|<tabular|<tformat|<cwith|1|-1|1|1|cell-halign|c>|<table|<row|<cell|<with|math-level|0|math-display|false|F<around*|(|n+1|)>>>>|<row|<cell|<with|math-level|0|math-display|false|F<around*|(|n|)>>>>>>>|)>=<with|math-font-series|bold|F><rsup|n-1><around*|(|<tabular|<tformat|<cwith|1|-1|1|1|cell-halign|c>|<table|<row|<cell|<with|math-level|0|math-display|false|1>>>|<row|<cell|<with|math-level|0|math-display|false|1>>>>>>|)>
+    </equation*>
+
+    其中，<math|<with|math-font-series|bold|F><rsup|n-1>> 表示矩阵 <math|<with|math-font-series|bold|F>> 的 <math|n-1> 次幂。
+  </definition>
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|papyrus>
+    <associate|page-screen-margin|false>
+  </collection>
+</initial>
