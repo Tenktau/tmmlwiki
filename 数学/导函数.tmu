@@ -1,0 +1,60 @@
+<TMU|<tuple|1.0.5|1.2.9.7>>
+
+<style|generic>
+
+<\body>
+  <\with|par-mode|center>
+    <chapter*|导函数>
+  </with>
+
+  <strong|导函数>（Derivative Function），简称<strong|导数>，是<strong|微积分学>中的一个核心概念。它描述了一个<strong|函数>在其定义域内<strong|每一点处的瞬时变化率>。简单来说，导函数告诉我们，当函数的自变量发生微小变化时，函数值会以多快的速度（和方向）随之变化。
+
+  <section*|核心概念与定义>
+
+  <\enumerate>
+    <item><strong|瞬时变化率：>
+
+    <\itemize>
+      <item>想象一辆行驶中的汽车。它的<strong|平均速度>是某段时间内行驶的路程除以时间。
+
+      <item><strong|瞬时速度>则是汽车在某个<strong|精确时刻>的速度，比如在 <code*|t=5> 秒时的速度。这就是路程函数 <code*|s(t) >在 <code*|t=5> 时的<strong|瞬时变化率>。
+
+      <item>导函数正是将这种“瞬时变化率”的概念推广到<strong|任意函数>在<strong|任意一点>。
+    </itemize>
+
+    <item><strong|极限定义 (正式定义)：>
+
+    <\itemize>
+      <item>设函数<code*| y = f(x)> 在点<code*| x₀ >的某个邻域内有定义
+
+      <item>当自变量 <code*|x> 在 <code*|x₀ >处取得增量<code*| Δx>（点 <code*|x₀+Δx> 仍在该邻域内）时，相应地，函数取得增量 <code*|Δy=f(x₀+Δx)-f(x₀)>
+
+      <item>如果增量之比 <code*|Δy/Δx> 当 <code*|Δx→0> 时的<strong|极限>存在，则称函数 <code*|y = f(x)> 在点 <code*|x₀> 处<strong|可导>，并称这个极限为函数在点 <code*|x₀ >处的<strong|导数>（或<strong|变化率>），记为：<next-line><code*|f'(x₀)> 或 <math|y<rprime|'><around*|\||<rsub|x=x<rsub|0>>|\|>> 或<code*| <math|<frac|dy|dx><around*|\||<rsub|x=x<rsub|0>>|\<nobracket\>>>> 或 <math|<frac|df|dx><around*|\||<rsub|x=x<rsub|0>>|\<nobracket\>>>
+
+      <item><strong|导函数：>如果函数 <code*|y = f(x)> 在开区间 <code*|(a, b)> 内的每一点都可导，那么就称函数 <code*|f(x)> 在区间 <code*|(a, b)> 内可导。这时，对于区间<code*| (a, b)> 内的每一个确定的<code*| x> 值，都对应着一个确定的导数 <code*|f'(x)>。这就构成了一个新的函数，称为函数 <code*|y = f(x) >的<strong|导函数>，简称<strong|导数>，记作 <code*|f'(x)>、<code*|y'>、<math|<frac|dy|dx>> 或 <code*|<math|<frac|df|dx>>>
+    </itemize>
+  </enumerate>
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|beamer>
+  </collection>
+</initial>
+
+<\references>
+  <\collection>
+    <associate|auto-1|<tuple|?|?>>
+    <associate|auto-2|<tuple|?|?>>
+  </collection>
+</references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|toc>
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|导函数> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>> <no-break><pageref|auto-1><vspace|1fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|核心概念与定义> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>> <no-break><pageref|auto-2><vspace|0.5fn>
+    </associate>
+  </collection>
+</auxiliary>
