@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>宏（编程语言特性）</title>
+    <meta content="MoganSTEMSuite 1.2.9.7" name="generator" />
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } math {
+      font-family: cmr, times, verdana } 
+    </style>
+    <script type="text/javascript">(function () {"use strict"; window.addEventListener("load",
+    function () { var box, div, link, namespaceURI; namespaceURI =
+    'http://www.w3.org/1998/Math/MathML'; if
+    (document.body.getElementsByTagNameNS(namespaceURI, 'math')[0]) {
+    document.body.insertAdjacentHTML('afterbegin', '<div style=\"border: 0;
+    clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding:
+    0; position: absolute; width: 1px;\"><math xmlns=\"' + namespaceURI +
+    '\"><mspace height=\"23px\" width=\"77px\"></mspace></math></div>'); div =
+    document.body.firstChild; box =
+    div.firstChild.firstChild.getBoundingClientRect();
+    document.body.removeChild(div); if (Math.abs(box.height - 23) > 1 ||
+    Math.abs(box.width - 77) > 1) { link = document.createElement('link');
+    link.href = 'https://fred-wang.github.io/mathml.css/mathml.css'; link.rel
+    = 'stylesheet'; document.head.appendChild(link); } } }); })();</script>
+  </head>
+  <body>
+    <script type="text/javascript"></script>
+    <script>document.querySelectorAll('style').forEach(style =>
+    style.remove());</script>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><strong>宏（编程语言特性）</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>注意.
+      </strong>宏和Notepad++,Word等软件中重复记录操作的宏不同。
+    </p>
+    <p>
+      <dfn>宏</dfn>（英语：Macro）是匹配并替换代码内的某个部分，借此扩展代码的表达能力的编程语言特性。[<a
+      href="#bib-ISOC99">1</a>][<a href="#bib-CLisp">2</a>][<a href="#bib-Asb">3</a>]不同于函数，编译器在语义分析阶段之前展开宏（英语：Macro
+      Expansion），因此会把代码树变换成任何结构。如果过度使用宏，会导致程序难以调试。
+    </p>
+    <p>
+      Lisp等函数式语言[<a href="#bib-CLisp">2</a>]、汇编语言[<a href="#bib-Asb">3</a>]和C语言[<a
+      href="#bib-ISOC99">1</a>]都实现了具有上述功能的宏。
+    </p>
+    <h2 id="auto-1">C语言的宏<span style="margin-left: 1em"></span></h2>
+    <p>
+      C语言的宏类似于正则表达式替换。编译器会搜索源代码，查找引用宏的位置，然后根据宏的定义，将对应的引用换成任意代码。有些宏带有参数，而参数对应于变量名等子模式。[<a
+      href="#bib-ISOC99">1</a>]
+    </p>
+    <p>
+      C语言的宏可以用来定义常量或者内联方法，
+    </p>
+    <div class="compact-block" style="margin-top: 1em; margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">#define Cst 5;</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">#define add(a, b)\</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 1em; margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">        a + b;</tt>
+      </p>
+    </div>
+    <p>
+      目前C++标准推荐使用<tt class="verbatim">const</tt>关键字来定义常量，用<tt
+      class="verbatim">inline</tt>关键字来定义内联方法。
+    </p>
+    <div class="compact-block" style="margin-top: 1em; margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">const int Cst = 5;</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">inline add(int a, int b){</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">        return a+b;</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 1em; margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">}</tt>
+      </p>
+    </div>
+    <p>
+      C语言的宏还可以创建变量绑定，可以创建结构体（类型）定义。如果某个函数在其调用者空间内创建变量，一般的编程语言不会让这样的代码通过编译。比如下例：
+    </p>
+    <div class="compact-block" style="margin-top: 1em; margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">#define Construct(type) \</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">               class type{ \</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">               public int x; \</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">        }</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">#define Array(name, type, size) \</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 1em; margin-left: 35.145870328812px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">        type name[size]</tt>
+      </p>
+    </div>
+    <p>
+      这样的宏会对IDE的语义分析带来困难。
+    </p>
+    <h2 id="auto-2">参考文献<span style="margin-left: 1em"></span></h2>
+    <div class="compact-block" style="text-indent: 0em">
+      <dl>
+        <p>
+          <dt>
+            <strong>[1]  </strong>
+          </dt>
+          <dd>
+            <p>
+              <a id="bib-ISOC99"></a>ISO/IEC 9899:1999 Programming language - C
+              <i>ISO</i>, 1999.
+            </p>
+          </dd>
+        </p>
+        <p>
+          <dt>
+            <strong>[2]  </strong>
+          </dt>
+          <dd>
+            <p>
+              <a id="bib-CLisp"></a>Guy SteeleCommon lisp the language <i>Digital
+              Press</i>, 1989.P78
+            </p>
+          </dd>
+        </p>
+        <p>
+          <dt>
+            <strong>[3]  </strong>
+          </dt>
+          <dd>
+            <p>
+              <a id="bib-Asb"></a>宏语言和宏处理程序<i>计算机软件及计算机应用</i>,
+              1975.
+            </p>
+          </dd>
+        </p>
+      </dl>
+    </div>
+  </body>
+</html>

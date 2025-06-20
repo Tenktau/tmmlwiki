@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>自然数</title>
+    <meta content="MoganSTEMSuite 1.2.9.7" name="generator" />
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } math {
+      font-family: cmr, times, verdana } 
+    </style>
+    <script type="text/javascript">(function () {"use strict"; window.addEventListener("load",
+    function () { var box, div, link, namespaceURI; namespaceURI =
+    'http://www.w3.org/1998/Math/MathML'; if
+    (document.body.getElementsByTagNameNS(namespaceURI, 'math')[0]) {
+    document.body.insertAdjacentHTML('afterbegin', '<div style=\"border: 0;
+    clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding:
+    0; position: absolute; width: 1px;\"><math xmlns=\"' + namespaceURI +
+    '\"><mspace height=\"23px\" width=\"77px\"></mspace></math></div>'); div =
+    document.body.firstChild; box =
+    div.firstChild.firstChild.getBoundingClientRect();
+    document.body.removeChild(div); if (Math.abs(box.height - 23) > 1 ||
+    Math.abs(box.width - 77) > 1) { link = document.createElement('link');
+    link.href = 'https://fred-wang.github.io/mathml.css/mathml.css'; link.rel
+    = 'stylesheet'; document.head.appendChild(link); } } }); })();</script>
+  </head>
+  <body>
+    <script type="text/javascript"></script>
+    <script>document.querySelectorAll('style').forEach(style =>
+    style.remove());</script>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><strong>自然数</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p>
+      定义自然数的方法有很多种，其中一种方法是<class
+      style="font-variant: small-caps">Peano</class>自然数公理。
+    </p>
+    <h2 id="auto-1">1<span style="margin-left: 1em"></span><class style="font-variant: small-caps">Peano</class>自然数公理<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      我们把<dfn>自然数</dfn>集合<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ℕ</mi></math>看成是由以下五条公理唯一确定的集合，参考[<a
+      href="#bib-数理逻辑2010汪芳庭">1</a>, &sect;0.2].
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>公理 <class style="font-style: normal">1</class>. </strong><a id="axiom:zero"></a><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>∈</mo><mi>ℕ</mi></mrow></math>.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>公理 <class style="font-style: normal">2</class>. </strong><a id="axiom:successor is a function"></a>若<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>，则<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>有且只有一个后继<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>x</mi><msup><mrow></mrow><mi>'</mi></msup></msup><mo>∈</mo><mi>ℕ</mi></mrow></math>.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>公理 <class style="font-style: normal">3</class>. </strong><a id="axiom:successor is non-zero"></a>对任意<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>,</mo><msup><mi>x</mi><msup><mrow></mrow><mi>'</mi></msup></msup><mo>≠</mo><mn>0</mn></mrow></math>.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>公理 <class style="font-style: normal">4</class>. </strong><a id="axiom:successor is injective"></a>对任意<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>∈</mo><mi>ℕ</mi></mrow></math>，若<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></math>，则<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mi>x</mi><mn>1</mn><msup><mrow></mrow><mi>'</mi></msup></msubsup><mo>≠</mo><msubsup><mi>x</mi><mn>2</mn><msup><mrow></mrow><mi>'</mi></msup></msubsup></mrow></math>.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>公理 <class style="font-style: normal">5</class>. </strong><a id="axiom:induction"></a>设<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>𝕄</mi><mo>⊆</mo><mi>ℕ</mi></mrow></math>.
+      若<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>∈</mo><mi>𝕄</mi></mrow></math>，且当<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>∈</mo><mi>𝕄</mi></mrow></math>时也有<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>x</mi><msup><mrow></mrow><mi>'</mi></msup></msup><mo>∈</mo><mi>𝕄</mi></mrow></math>，则<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>𝕄</mi><mo>=</mo><mi>ℕ</mi></mrow></math>.
+    </p>
+    <p>
+      五条公理中含有两个没有给出定义的概念：<math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math>和后继。
+    </p>
+    <p>
+      我们对<class style="font-variant: small-caps">Peano</class>自然数公理做适当展开[<a
+      href="#bib-数学基础2018汪芳庭">2</a>]：
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定理 <class style="font-style: normal">1</class>. </strong><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>,</mo><msup><mi>x</mi><mi>'</mi></msup><mo>≠</mo><mi>x</mi></mrow></math>.
+    </p>
+    <p style="margin-top: 1em">
+      <strong>证明. </strong>令<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>𝕄</mi><mo>=</mo><mrow><mo
+      form="prefix">{</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>|</mo><msup><mi>x</mi><mi>'</mi></msup><mo>≠</mo><mi>x</mi><mo
+      form="postfix">}</mo></mrow></mrow></math>.
+    </p>
+    <ol>
+      <li>
+        <p>
+          由公理 <a href="#axiom:zero">1</a>，<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>∈</mo><mi>ℕ</mi></mrow></math>；由公理
+          <a href="#axiom:successor is non-zero">3</a>，<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mn>0</mn><mi>'</mi></msup><mo>≠</mo><mn>0</mn></mrow></math>，故：<math
+          xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>∈</mo><mi>𝕄</mi></mrow></math>.
+        </p>
+      </li>
+      <li>
+        <p>
+          我们可以通过如下推导得到：当<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>∈</mo><mi>𝕄</mi></mrow></math>的时候，也有<math
+          xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>x</mi><mi>'</mi></msup><mo>∈</mo><mi>𝕄</mi></mrow></math>:
+        </p>
+        <center>
+          <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mtable columnalign="right center left">
+            <mtr>
+              <mtd><mrow><mi>x</mi><mo>∈</mo><mi>𝕄</mi></mrow></mtd>
+              <mtd><mo>⇒</mo></mtd>
+              <mtd><mrow><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mi>且</mi><msup><mi>x</mi><mi>'</mi></msup><mo>≠</mo><mi>x</mi></mrow></mtd>
+            </mtr>
+            <mtr>
+              <mtd><mrow></mrow></mtd>
+              <mtd><mo>⇒</mo></mtd>
+              <mtd><mrow><msup><mi>x</mi><mi>'</mi></msup><mo>∈</mo><mi>ℕ</mi><mi>（</mi><mi>公</mi><mi>理</mi><mo>&ApplyFunction;</mo><mi>）</mi><mi>且</mi><mo>&ApplyFunction;</mo><msup><mrow><mo
+              form="prefix">(</mo><msup><mi>x</mi><mi>'</mi></msup><mo form="postfix">)</mo></mrow><mi>'</mi></msup><mo>≠</mo><msup><mi>x</mi><mi>'</mi></msup><mi>（</mi><mi>公</mi><mi>理</mi><mo>&ApplyFunction;</mo><mi>）</mi></mrow></mtd>
+            </mtr>
+            <mtr>
+              <mtd><mrow></mrow></mtd>
+              <mtd><mo>⇒</mo></mtd>
+              <mtd><mrow><msup><mi>x</mi><mi>'</mi></msup><mo>∈</mo><mi>𝕄</mi></mrow></mtd>
+            </mtr>
+          </mtable></mstyle></math>
+        </center>
+      </li>
+    </ol>
+    <p style="margin-bottom: 1em">
+      由以上两点以及公理 <a href="#axiom:induction">5</a>得<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>𝕄</mi><mo>=</mo><mi>ℕ</mi></mrow></math>，即<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>ℕ</mi><mo>,</mo><msup><mi>x</mi><mi>'</mi></msup><mo>≠</mo><mi>x</mi></mrow></math>.<span
+      style="margin-left: 1em"></span><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>□</mi></math>
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定理 <class style="font-style: normal">2</class>. </strong>若<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow></math>，则唯一存在<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math>，使<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>y</mi><mi>'</mi></msup><mo>=</mo><mi>x</mi></mrow></math>.（每个非0自然数都有自己唯一的&ldquo;前邻&rdquo;.）
+    </p>
+    <h2 id="auto-2">参考文献<span style="margin-left: 1em"></span></h2>
+    <div class="compact-block" style="text-indent: 0em">
+      <dl>
+        <p>
+          <dt>
+            <strong>[1]  </strong>
+          </dt>
+          <dd>
+            <p>
+              <a id="bib-数理逻辑2010汪芳庭"></a>汪芳庭. <i>数理逻辑</i>, 卷 .
+              中国科学技术大学出版社, 2 版本,  2010.
+            </p>
+          </dd>
+        </p>
+        <p>
+          <dt>
+            <strong>[2]  </strong>
+          </dt>
+          <dd>
+            <p>
+              <a id="bib-数学基础2018汪芳庭"></a>汪芳庭. <i>数学基础</i>, 卷 .
+              高等教育出版社, 北京, 2 版本, 10 2018.
+            </p>
+          </dd>
+        </p>
+      </dl>
+    </div>
+  </body>
+</html>

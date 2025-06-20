@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>费马小定理</title>
+    <meta content="MoganSTEMSuite 1.2.9.7" name="generator" />
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } math {
+      font-family: cmr, times, verdana } 
+    </style>
+    <script type="text/javascript">(function () {"use strict"; window.addEventListener("load",
+    function () { var box, div, link, namespaceURI; namespaceURI =
+    'http://www.w3.org/1998/Math/MathML'; if
+    (document.body.getElementsByTagNameNS(namespaceURI, 'math')[0]) {
+    document.body.insertAdjacentHTML('afterbegin', '<div style=\"border: 0;
+    clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding:
+    0; position: absolute; width: 1px;\"><math xmlns=\"' + namespaceURI +
+    '\"><mspace height=\"23px\" width=\"77px\"></mspace></math></div>'); div =
+    document.body.firstChild; box =
+    div.firstChild.firstChild.getBoundingClientRect();
+    document.body.removeChild(div); if (Math.abs(box.height - 23) > 1 ||
+    Math.abs(box.width - 77) > 1) { link = document.createElement('link');
+    link.href = 'https://fred-wang.github.io/mathml.css/mathml.css'; link.rel
+    = 'stylesheet'; document.head.appendChild(link); } } }); })();</script>
+  </head>
+  <body>
+    <script type="text/javascript"></script>
+    <script>document.querySelectorAll('style').forEach(style =>
+    style.remove());</script>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><strong>费马小定理</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定理. </strong><class style="font-style: normal"><strong>(费马)
+      </strong></class><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi></math>为质数，<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math>为任意自然数，则<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>a</mi><mi>p</mi></msup><mo>≡</mo><mi>a</mi><mo>&ApplyFunction;</mo><mrow><mo
+      form="prefix">(</mo><mo>mod</mo><mo>&ApplyFunction;</mo><mi>p</mi><mo form="postfix">)</mo></mrow></mrow></math>&#x3002;
+    </p>
+    <p style="margin-top: 1em">
+      <strong>证明. </strong>对<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>a</mi></math>使用数学归纳法。
+    </p>
+    <p>
+      第一步：当<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><mo>=</mo><mn>1</mn></mrow></math>时，<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mn>1</mn><mi>p</mi></msup><mo>≡</mo><mn>1</mn><mo>&ApplyFunction;</mo><mrow><mo
+      form="prefix">(</mo><mo>mod</mo><mo>&ApplyFunction;</mo><mi>p</mi><mo form="postfix">)</mo></mrow></mrow></math>
+      成立。
+    </p>
+    <p>
+      第二步：假设当<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><mo>=</mo><mi>n</mi></mrow></math>时，<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>n</mi><mi>p</mi></msup><mo>≡</mo><mi>n</mi><mrow><mo
+      form="prefix">(</mo><mo>mod</mo><mo>&ApplyFunction;</mo><mi>p</mi><mo form="postfix">)</mo></mrow></mrow></math>成立。那么<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mo>|</mo><mrow><mo form="prefix">(</mo><msup><mi>n</mi><mi>p</mi></msup><mo>-</mo><mi>n</mi><mo
+      form="postfix">)</mo></mrow></mrow></math>&#x3002;
+    </p>
+    <p>
+      考虑<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mrow><mo form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo
+      form="postfix">)</mo></mrow><mi>p</mi></msup><mo>-</mo><mrow><mo form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo
+      form="postfix">)</mo></mrow></mrow></math>的情况：
+    </p>
+    <center>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mtable columnalign="right center left">
+        <mtr>
+          <mtd><mrow><msup><mrow><mo form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo
+          form="postfix">)</mo></mrow><mi>p</mi></msup><mo>-</mo><mrow><mo form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo
+          form="postfix">)</mo></mrow></mrow></mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd><mrow><munderover><mo>&Sum;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>p</mi></munderover><msubsup><mi>C</mi><mi>p</mi><mi>k</mi></msubsup><msup><mi>n</mi><mi>k</mi></msup><mo>-</mo><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mtd>
+        </mtr>
+        <mtr>
+          <mtd><mrow></mrow></mtd>
+          <mtd><mo>=</mo></mtd>
+          <mtd><mrow><munderover><mo>&Sum;</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></munderover><msubsup><mi>C</mi><mi>p</mi><mi>k</mi></msubsup><msup><mi>n</mi><mi>k</mi></msup><mo>+</mo><mrow><mo
+          form="prefix">(</mo><msup><mi>n</mi><mi>p</mi></msup><mo>-</mo><mi>n</mi><mo
+          form="postfix">)</mo></mrow></mrow></mtd>
+        </mtr>
+      </mtable></mstyle></math>
+    </center>
+    <p>
+      由于<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mi>C</mi><mi>p</mi><mi>k</mi></msubsup><mo>=</mo><mfrac><mrow><mi>p</mi><mo>!</mo></mrow><mrow><mi>k</mi><mo>!</mo><mrow><mo
+      form="prefix">(</mo><mi>p</mi><mo>-</mo><mi>k</mi><mo form="postfix">)</mo></mrow><mo>!</mo></mrow></mfrac></mrow></math>且p为质数：
+    </p>
+    <center>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mrow><mi>p</mi><mo>|</mo><msubsup><mi>C</mi><mi>p</mi><mi>k</mi></msubsup><mo>,</mo><mn>1</mn><mo>⩽</mo><mi>k</mi><mo>⩽</mo><mi>p</mi><mo>-</mo><mn>1</mn></mrow></mstyle></math>
+    </center>
+    <p>
+      所以：
+    </p>
+    <center>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mrow><mi>p</mi><mo>|</mo><munderover><mo>&Sum;</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></munderover><msubsup><mi>C</mi><mi>p</mi><mi>k</mi></msubsup><msup><mi>n</mi><mi>k</mi></msup><mo>+</mo><mrow><mo
+      form="prefix">(</mo><msup><mi>n</mi><mi>p</mi></msup><mo>-</mo><mi>n</mi><mo
+      form="postfix">)</mo></mrow></mrow></mstyle></math>
+    </center>
+    <p>
+      也就是<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mo>|</mo><msup><mrow><mo form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo
+      form="postfix">)</mo></mrow><mi>p</mi></msup><mo>-</mo><mrow><mo form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo
+      form="postfix">)</mo></mrow></mrow></math>也成立。
+    </p>
+    <p>
+      根据数学归纳法，对于任意自然数a，<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>a</mi><mi>p</mi></msup><mo>≡</mo><mi>a</mi><mrow><mo
+      form="prefix">(</mo><mo>mod</mo><mo>&ApplyFunction;</mo><mi>p</mi><mo form="postfix">)</mo></mrow></mrow></math>都成立。
+    </p>
+    <p style="margin-bottom: 1em">
+      <span style="margin-left: 1em"></span><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>□</mi></math>
+    </p>
+    <h2 id="auto-1">1<span style="margin-left: 1em"></span>相关链接<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <a href="https://artofproblemsolving.com/wiki/index.php/Fermat%27s_Little_Theorem">AoPS: Fermat's Little Theorem</a>
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

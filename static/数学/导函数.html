@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>No title</title>
+    <meta content="MoganSTEMSuite 1.2.9.7" name="generator" />
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } math {
+      font-family: cmr, times, verdana } 
+    </style>
+    <script type="text/javascript">(function () {"use strict"; window.addEventListener("load",
+    function () { var box, div, link, namespaceURI; namespaceURI =
+    'http://www.w3.org/1998/Math/MathML'; if
+    (document.body.getElementsByTagNameNS(namespaceURI, 'math')[0]) {
+    document.body.insertAdjacentHTML('afterbegin', '<div style=\"border: 0;
+    clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding:
+    0; position: absolute; width: 1px;\"><math xmlns=\"' + namespaceURI +
+    '\"><mspace height=\"23px\" width=\"77px\"></mspace></math></div>'); div =
+    document.body.firstChild; box =
+    div.firstChild.firstChild.getBoundingClientRect();
+    document.body.removeChild(div); if (Math.abs(box.height - 23) > 1 ||
+    Math.abs(box.width - 77) > 1) { link = document.createElement('link');
+    link.href = 'https://fred-wang.github.io/mathml.css/mathml.css'; link.rel
+    = 'stylesheet'; document.head.appendChild(link); } } }); })();</script>
+  </head>
+  <body>
+    <script type="text/javascript"></script>
+    <script>document.querySelectorAll('style').forEach(style =>
+    style.remove());</script>
+    <center>
+      <h1 id="auto-1">导函数<span style="margin-left: 1em"></span></h1>
+    </center>
+    <p>
+      <strong>导函数</strong>（Derivative
+      Function），简称<strong>导数</strong>，是<strong>微积分学</strong>中的一个核心概念。它描述了一个<strong>函数</strong>在其定义域内<strong>每一点处的瞬时变化率</strong>。简单来说，导函数告诉我们，当函数的自变量发生微小变化时，函数值会以多快的速度（和方向）随之变化。
+    </p>
+    <h2 id="auto-2">核心概念与定义<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>瞬时变化率：</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              想象一辆行驶中的汽车。它的<strong>平均速度</strong>是某段时间内行驶的路程除以时间。
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>瞬时速度</strong>则是汽车在某个<strong>精确时刻</strong>的速度，比如在
+              <code>t=5</code> 秒时的速度。这就是路程函数
+              <code>s(t) </code>在 <code>t=5</code>
+              时的<strong>瞬时变化率</strong>&#x3002;
+            </p>
+          </li>
+          <li>
+            <p>
+              导函数正是将这种&ldquo;瞬时变化率&rdquo;的概念推广到<strong>任意函数</strong>在<strong>任意一点</strong>&#x3002;
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>极限定义 (正式定义)：</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              设函数<code> y = f(x)</code> 在点<code> x0
+              </code>的某个邻域内有定义
+            </p>
+          </li>
+          <li>
+            <p>
+              当自变量 <code>x</code> 在 <code>x0
+              </code>处取得增量<code> &Delta;x</code>（点
+              <code>x0+&Delta;x</code>
+              仍在该邻域内）时，相应地，函数取得增量
+              <code>&Delta;y=f(x0+&Delta;x)-f(x0)</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              如果增量之比 <code>&Delta;y/&Delta;x</code> 当
+              <code>&Delta;x&rarr;0</code>
+              时的<strong>极限</strong>存在，则称函数 <code>y =
+              f(x)</code> 在点 <code>x0</code>
+              处<strong>可导</strong>，并称这个极限为函数在点
+              <code>x0
+              </code>处的<strong>导数</strong>（或<strong>变化率</strong>），记为：<br
+              /><code>f'(x0)</code> 或 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>y</mi><mi>'</mi></msup><mrow><msub><mo
+              form="prefix">|</mo><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo
+              form="postfix">|</mo></mrow></mrow></math> 或<code> <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mi>dy</mi><mi>dx</mi></mfrac><mrow><msub><mo
+              form="prefix">|</mo><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo
+              form="postfix">.</mo></mrow></mrow></math></code> 或 <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mi>df</mi><mi>dx</mi></mfrac><mrow><msub><mo
+              form="prefix">|</mo><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo
+              form="postfix">.</mo></mrow></mrow></math>
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>导函数：</strong>如果函数 <code>y = f(x)</code>
+              在开区间 <code>(a, b)</code>
+              内的每一点都可导，那么就称函数 <code>f(x)</code>
+              在区间 <code>(a, b)</code>
+              内可导。这时，对于区间<code> (a, b)</code>
+              内的每一个确定的<code> x</code>
+              值，都对应着一个确定的导数
+              <code>f'(x)</code>。这就构成了一个新的函数，称为函数
+              <code>y = f(x)
+              </code>的<strong>导函数</strong>，简称<strong>导数</strong>，记作
+              <code>f'(x)</code>&#x3001;<code>y'</code>&#x3001;<math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi>dy</mi><mi>dx</mi></mfrac></math>
+              或 <code><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi>df</mi><mi>dx</mi></mfrac></math></code>
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </body>
+</html>

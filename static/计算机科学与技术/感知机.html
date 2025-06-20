@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>感知机</title>
+    <meta content="MoganSTEMSuite 1.2.9.7" name="generator" />
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } math {
+      font-family: cmr, times, verdana } 
+    </style>
+    <script type="text/javascript">(function () {"use strict"; window.addEventListener("load",
+    function () { var box, div, link, namespaceURI; namespaceURI =
+    'http://www.w3.org/1998/Math/MathML'; if
+    (document.body.getElementsByTagNameNS(namespaceURI, 'math')[0]) {
+    document.body.insertAdjacentHTML('afterbegin', '<div style=\"border: 0;
+    clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding:
+    0; position: absolute; width: 1px;\"><math xmlns=\"' + namespaceURI +
+    '\"><mspace height=\"23px\" width=\"77px\"></mspace></math></div>'); div =
+    document.body.firstChild; box =
+    div.firstChild.firstChild.getBoundingClientRect();
+    document.body.removeChild(div); if (Math.abs(box.height - 23) > 1 ||
+    Math.abs(box.width - 77) > 1) { link = document.createElement('link');
+    link.href = 'https://fred-wang.github.io/mathml.css/mathml.css'; link.rel
+    = 'stylesheet'; document.head.appendChild(link); } } }); })();</script>
+  </head>
+  <body>
+    <script type="text/javascript"></script>
+    <script>document.querySelectorAll('style').forEach(style =>
+    style.remove());</script>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><strong>感知机</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p style="margin-top: 1em">
+      <strong>定义. </strong>假设输入空间（特征空间）是<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>χ</mi><mo>⊆</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>，输出空间是<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>𝒴</mi><mo>=</mo><mrow><mo form="prefix">{</mo><mo>+</mo><mn>1</mn><mo>,</mo><mo>-</mo><mn>1</mn><mo
+      form="postfix">}</mo></mrow></mrow></math>.输入<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo>∈</mo><mi>𝒳</mi></mrow></math>表示实例的特征向量，对应于输入空间（特征空间）的点：输出<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>y</mi><mo>∈</mo><mi>𝒴</mi></mrow></math>表示实例的类别.由输入空间到输出空间的如下函数
+    </p>
+    <center>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mrow><mi>f</mi><mrow><mo form="prefix">(</mo><mi>x</mi><mo
+      form="postfix">)</mo></mrow><mo>=</mo><mi>sign</mi><mrow><mo form="prefix">(</mo><mi>w</mi><mo>⋅</mo><mi>x</mi><mo>+</mo><mi>b</mi><mo
+      form="postfix">)</mo></mrow></mrow></mstyle></math>
+    </center>
+    <p>
+      称为<dfn>感知机</dfn>([<a href="#bib-统计学习方法2012李航">1</a>, 定义2.1]).其中，<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mi>w</mi></math>和<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>b</mi></math>为感知机模型参数，<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>叫作权值(weight)或者值向量(weight
+      vector)，<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>b</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>叫做偏置(bias)，<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><mo>⋅</mo><mi>x</mi></mrow></math>表示<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mi>w</mi></math>与<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>的内积.
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>sign</mi></math>是符号函数，即
+    </p>
+    <p style="margin-bottom: 1em">
+      <center>
+        <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mrow><mi>sign</mi><mo>&InvisibleTimes;</mo><mrow><mo
+        form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow><mo>=</mo><mstyle
+        scriptlevel="1"><mrow><mo form="prefix">{</mo><mtable columnalign="left left">
+          <mtr>
+            <mtd><mrow><mo>+</mo><mn>1</mn><mo>,</mo></mrow></mtd>
+            <mtd><mrow><mi>x</mi><mo>⩾</mo><mn>0</mn></mrow></mtd>
+          </mtr>
+          <mtr>
+            <mtd><mrow><mo>-</mo><mn>1</mn><mo>,</mo></mrow></mtd>
+            <mtd><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd>
+          </mtr>
+        </mtable><mo form="postfix">.</mo></mrow></mstyle></mrow></mstyle></math>
+      </center>
+    </p>
+    <h2 id="auto-1">参考文献<span style="margin-left: 1em"></span></h2>
+    <div class="compact-block" style="text-indent: 0em">
+      <dl>
+        <p>
+          <dt>
+            <strong>[1]  </strong>
+          </dt>
+          <dd>
+            <p>
+              <a id="bib-统计学习方法2012李航"></a>李航. <i>统计学习方法</i>, 卷 .
+              清华大学出版社, 北京, 1 版本, 3 2012.
+            </p>
+          </dd>
+        </p>
+      </dl>
+    </div>
+  </body>
+</html>

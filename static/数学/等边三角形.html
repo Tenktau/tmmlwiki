@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>等边三角形</title>
+    <meta content="MoganSTEMSuite 1.2.9.7" name="generator" />
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } math {
+      font-family: cmr, times, verdana } 
+    </style>
+    <script type="text/javascript">(function () {"use strict"; window.addEventListener("load",
+    function () { var box, div, link, namespaceURI; namespaceURI =
+    'http://www.w3.org/1998/Math/MathML'; if
+    (document.body.getElementsByTagNameNS(namespaceURI, 'math')[0]) {
+    document.body.insertAdjacentHTML('afterbegin', '<div style=\"border: 0;
+    clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding:
+    0; position: absolute; width: 1px;\"><math xmlns=\"' + namespaceURI +
+    '\"><mspace height=\"23px\" width=\"77px\"></mspace></math></div>'); div =
+    document.body.firstChild; box =
+    div.firstChild.firstChild.getBoundingClientRect();
+    document.body.removeChild(div); if (Math.abs(box.height - 23) > 1 ||
+    Math.abs(box.width - 77) > 1) { link = document.createElement('link');
+    link.href = 'https://fred-wang.github.io/mathml.css/mathml.css'; link.rel
+    = 'stylesheet'; document.head.appendChild(link); } } }); })();</script>
+  </head>
+  <body>
+    <script type="text/javascript"></script>
+    <script>document.querySelectorAll('style').forEach(style =>
+    style.remove());</script>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><strong>等边三角形</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong>定义.
+      </strong>三条边长度相等的三角形，是<dfn>等边三角形</dfn>。等边三角形又称<dfn>正三角形</dfn>&#x3002;
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><p>
+            <img style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 17.591951515151518em" src="等边三角形-2.png" />
+          </p></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><p>
+            <b>图 1. </b><a id="auto-1"></a>
+          </p><div class="float">
+            <p>
+              等边<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>△</mi><mi>ABC</mi></mrow></math>
+            </p>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <h2 id="auto-2">1<span style="margin-left: 1em"></span>绘图<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-3">1.1<span style="margin-left: 1em"></span>欧几里得<span style="margin-left: 1em"></span></h3>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><span style="color: #401000"><pre class="verbatim" xml:space="preserve">
+Eukleides] </pre></span></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><p>
+            <span style="color: #000080"><pre class="verbatim" xml:space="preserve">
+% -width 0.4par
+A B C equilateral 6
+draw A.B
+draw B.C
+draw C.A
+
+label
+  A -135:
+  B -45:
+  C 90:
+end</pre></span>
+          </p></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            <img style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 17.591951515151518em" src="等边三角形-4.png" />
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><span style="color: #401000"><tt class="verbatim">Eukleides] </tt></span></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><p>
+            <span style="color: #000080"><pre class="verbatim" xml:space="preserve">
+</pre></span>
+          </p></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <h3 id="auto-4">1.2<span style="margin-left: 1em"></span>渐近线<span style="margin-left: 1em"></span></h3>
+    <div class="compact-block" style="margin-top: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><span style="color: #401000"><pre class="verbatim" xml:space="preserve">
+asy] </pre></span></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><p>
+            <span style="color: #000080"><pre class="verbatim" xml:space="preserve">
+%asy -width 0.2par
+
+label(&quot;C&quot;, (1cm, 1.732cm), N);
+label(&quot;A&quot;, (0cm, 0), S);
+label(&quot;B&quot;, (2cm, 0), S);
+draw((1cm,1.732cm) -- (0,0) -- (2cm,0) -- cycle);</pre></span>
+          </p></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="compact-block" style="margin-top: 0.5em; margin-bottom: 0.5em; text-indent: 0em">
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <tt class="verbatim"><div style="margin-left: 35.145870328812px">
+          <div align="justify">
+            <img style="margin-left: 0em; margin-bottom: 0em; margin-right: 0em; margin-top: 0em; vertical-align: 0em; height: 8.795975757575759em" src="等边三角形-6.png" />
+          </div>
+        </div></tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 0.5em; text-indent: 0em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="padding-left: 0em; padding-right: 0em"><span style="color: #401000"><pre class="verbatim" xml:space="preserve">
+asy] </pre></span></td>
+          <td style="width: 100%; padding-left: 0em; padding-right: 0em"><p>
+            <span style="color: #000080"><pre class="verbatim" xml:space="preserve">
+</pre></span>
+          </p></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <h2 id="auto-5">2<span style="margin-left: 1em"></span>参考资料<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <a href="https://baike.baidu.com/item/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2">百度百科：等边三角形</a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="https://mathworld.wolfram.com/EquilateralTriangle.html">Wolfram Mathword: Equilateral Triangle</a>
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

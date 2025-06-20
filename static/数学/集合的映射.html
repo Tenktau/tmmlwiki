@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>集合的映射</title>
+    <meta content="MoganSTEMSuite 1.2.9.7" name="generator" />
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } math {
+      font-family: cmr, times, verdana } 
+    </style>
+    <script type="text/javascript">(function () {"use strict"; window.addEventListener("load",
+    function () { var box, div, link, namespaceURI; namespaceURI =
+    'http://www.w3.org/1998/Math/MathML'; if
+    (document.body.getElementsByTagNameNS(namespaceURI, 'math')[0]) {
+    document.body.insertAdjacentHTML('afterbegin', '<div style=\"border: 0;
+    clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding:
+    0; position: absolute; width: 1px;\"><math xmlns=\"' + namespaceURI +
+    '\"><mspace height=\"23px\" width=\"77px\"></mspace></math></div>'); div =
+    document.body.firstChild; box =
+    div.firstChild.firstChild.getBoundingClientRect();
+    document.body.removeChild(div); if (Math.abs(box.height - 23) > 1 ||
+    Math.abs(box.width - 77) > 1) { link = document.createElement('link');
+    link.href = 'https://fred-wang.github.io/mathml.css/mathml.css'; link.rel
+    = 'stylesheet'; document.head.appendChild(link); } } }); })();</script>
+  </head>
+  <body>
+    <script type="text/javascript"></script>
+    <script>document.querySelectorAll('style').forEach(style =>
+    style.remove());</script>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><strong>集合的映射</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p style="margin-top: 1em">
+      <strong>定义 <class style="font-style: normal">1</class>. </strong>
+      设
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math>
+      是两个集合，如果
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>
+      是一种关系
+      <div class="toggle" style="display: none">
+        《数学分析教程》中的定义在这里使用的是规律，Yiqi
+        Xu认为：规律通常没有准确定义，而A和B上的关系定义为A和B笛卡尔积的子集。
+      </div>
+      ，使得对于
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
+      中的每一个元素
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>
+      ，
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi></math>
+      中有唯一确定的元素
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>f</mi><mrow><mo form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow></mrow></math>
+      与
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>
+      对应，则称
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>
+      是一个从
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>
+      到
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi></math>
+      的
+      <dfn>映射</dfn>
+      (参考[
+      <a href="#bib-常庚哲2012数学分析教程">1</a>
+      , 定义2.1.1])，记作
+    </p>
+    <center>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mrow><mi>f</mi><mo>:</mo><mi>A</mi><mo>→</mo><mi>B</mi><mi>或</mi><mi>A</mi><mover><mo
+      stretchy="true">→</mo><mi>f</mi></mover><mi>B</mi><mi>.</mi></mrow></mstyle></math>
+    </center>
+    <p>
+      其中<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>f</mi><mrow><mo form="prefix">(</mo><mi>x</mi><mo
+      form="postfix">)</mo></mrow></mrow></math>叫做<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>在映射<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>之下的<dfn>像</dfn>或<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>在<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math>上的<dfn>值</dfn>. 
+    </p>
+    <p>
+      集合<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math>叫做映射<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>的<dfn>定义域</dfn>，一般记作<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>dom</mi><mrow><mo form="prefix">(</mo><mi>f</mi><mo form="postfix">)</mo></mrow></mrow></math>；集合<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi></math>叫做映射<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>的<dfn>目标域</dfn>，一般记作<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>cod</mi><mrow><mo form="prefix">(</mo><mi>f</mi><mo form="postfix">)</mo></mrow></mrow></math>.
+      
+    </p>
+    <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>的所有像构成的集合称为<math
+      xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi></math>的<dfn>值域</dfn>，一般记作<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>f</mi><mrow><mo
+      form="prefix">(</mo><mi>A</mi><mo form="postfix">)</mo></mrow></mrow></math>，即
+    </p>
+    <p style="margin-bottom: 1em">
+      <center>
+        <math xmlns="http://www.w3.org/1998/Math/MathML"><mstyle displaystyle="true"><mrow><mi>f</mi><mrow><mo form="prefix">(</mo><mi>A</mi><mo
+        form="postfix">)</mo></mrow><mo>=</mo><mrow><mo form="prefix">{</mo><mi>f</mi><mrow><mo
+        form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow><mo>∈</mo><mi>B</mi><mo>?</mo><mi>x</mi><mo>∈</mo><mi>A</mi><mo
+        form="postfix">}</mo></mrow><mi>.</mi></mrow></mstyle></math>
+      </center>
+    </p>
+    <h2 id="auto-1">参考文献<span style="margin-left: 1em"></span></h2>
+    <div class="compact-block" style="text-indent: 0em">
+      <dl>
+        <p>
+          <dt>
+            <strong>[1]  </strong>
+          </dt>
+          <dd>
+            <p>
+              <a id="bib-常庚哲2012数学分析教程"></a>常庚哲 与 史济怀.
+              <i>数学分析教程.上册</i>, 卷 .
+              中国科学技术大学出版社, 合肥, 3 版本, 8 2012.
+            </p>
+          </dd>
+        </p>
+      </dl>
+    </div>
+  </body>
+</html>
