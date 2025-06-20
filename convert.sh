@@ -34,7 +34,7 @@ for TMU_FILE in "${TMU_FILES[@]}"; do
     echo "  输出到: ${HTML_FILE}"
     
     # 启动转换进程并记录PID
-    /usr/bin/MoganResearch -c "${TMU_FILE}" "${HTML_FILE}" >/dev/null 2>&1 &
+    /usr/bin/MoganResearch -headless -c "${TMU_FILE}" "${HTML_FILE}" >/dev/null 2>&1 &
     CONVERT_PID=$!
     
     # 等待指定时间
