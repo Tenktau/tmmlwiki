@@ -1,0 +1,44 @@
+<TMU|<tuple|1.0.5|1.2.9.7>>
+
+<style|<tuple|generic|chinese>>
+
+<\body>
+  <doc-data|<doc-title|导函数>>
+
+  <\definition*>
+    设函数 <math|y=f<around*|(|x|)>> 在点 <math|x<rsub|0>> 的某个邻域内有定义。当自变量 <math|x> 在 <math|x<rsub|0>> 处取得增量 <math|\<Delta\>x>（点 <math|x<rsub|0>+\<Delta\>x> 仍在该邻域内）时，相应地，函数取得增量 <math|\<Delta\>y=f<around*|(|x<rsub|0>+\<Delta\>x|)>-f<around*|(|x<rsub|0>|)>>。如果增量比 <math|<frac|\<Delta\>y|\<Delta\>x>> 当 <math|\<Delta\>x\<rightarrow\>0> 时的极限存在，即
+
+    <equation*|<below|lim\<nospace\>|\<Delta\>x\<rightarrow\>0><frac|\<Delta\>y|\<Delta\>x>=<below|lim\<nospace\>|\<Delta\>x\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+\<Delta\>x|)>-f<around*|(|x<rsub|0>|)>|\<Delta\>x>>
+
+    存在，则称函数 <math|f<around*|(|x|)>> 在点 <math|x<rsub|0>> 处<strong|可导>，并称此极限值为函数 <math|f<around*|(|x|)>> 在点 <math|x<rsub|0>> 处的<strong|导数>，记为 <math|f<rsup|\<prime\>><around*|(|x<rsub|0>|)>>，即
+
+    <equation*|f<rsup|\<prime\>><around*|(|x<rsub|0>|)>=<below|lim\<nospace\>|\<Delta\>x\<rightarrow\>0><frac|f<around*|(|x<rsub|0>+\<Delta\>x|)>-f<around*|(|x<rsub|0>|)>|\<Delta\>x>>
+
+    也可记作 <math|y<rsup|\<prime\>>\<mid\><rsub|x=x<rsub|0>>>, <math|<frac|\<mathd\>y|\<mathd\>x>\<mid\><rsub|x=x<rsub|0>>> 或 <math|<frac|\<mathd\>f<around*|(|x|)>|\<mathd\>x>\<mid\><rsub|x=x<rsub|0>>>；若函数 <math|y=f<around*|(|x|)>> 在开区间 <math|<around*|(|a,b|)>> 内的每一点都可导，则称函数 <math|f<around*|(|x|)>> 在区间 <math|<around*|(|a,b|)>> 内<strong|可导>。此时，对于区间 <math|<around*|(|a,b|)>> 内的每一个确定的 <math|x> 值，都对应着一个确定的导数 <math|f<rsup|\<prime\>><around*|(|x|)>>。这样就构成了一个新的函数，称为函数 <math|y=f<around*|(|x|)>> 在区间 <math|<around*|(|a,b|)>> 内的<strong|导函数>，简称<strong|导数>，记作 <math|f<rsup|\<prime\>><around*|(|x|)>>, <math|y<rsup|\<prime\>>>, <math|<frac|\<mathd\>y|\<mathd\>x>> 或 <math|<frac|\<mathd\>f<around*|(|x|)>|\<mathd\>x>>。即
+
+    <equation*|f<rsup|\<prime\>><around*|(|x|)>=<below|lim\<nospace\>|\<Delta\>x\<rightarrow\>0><frac|f<around*|(|x+\<Delta\>x|)>-f<around*|(|x|)>|\<Delta\>x><around*|(|x\<in\><around*|(|a,b|)>|)>>
+  </definition*>
+
+    <\remark>
+    定义中的极限过程 <math|\<Delta\>x\<rightarrow\>0> 要求极限存在且唯一（包含左、右极限均存在且相等）。
+    </remark>
+
+    <\remark>
+      导函数 <math|f<rsup|\<prime\>><around*|(|x|)>> 反映了原函数 <math|f<around*|(|x|)>> 在点 <math|x> 处的瞬时变化率。
+    </remark>
+
+    <\remark>
+      导数的几何意义是函数曲线 <math|y=f<around*|(|x|)>> 在点 <math|<around*|(|x,f<around*|(|x|)>|)>> 处切线的斜率。
+    </remark>
+
+    <\remark>
+      导函数本身也是一个函数，其定义域是原函数 <math|f<around*|(|x|)>> 的可导点构成的集合。
+    </remark>
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|paper>
+    <associate|page-screen-margin|false>
+  </collection>
+</initial>
