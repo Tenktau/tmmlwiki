@@ -1,0 +1,78 @@
+name: Convert TMU to Image and Comment
+
+on: [pull_request]
+
+jobs:
+  process-files:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install custom TMU converter
+        run: |
+          curl -L https://mirrors.ustc.edu.cn/github-release/XmacsLabs/mogan/LatestRelease/mogan-research-v1.2.9.7-ubuntu24.04.deb
+          sudo apt install mogan-research-v1.2.9.7-ubuntu24.04.deb
+
+      - name: Install PDF-to-image tools
+        run: |
+          sudo apt-get install -y poppler-utils
+          pip install PyMuPDF
+
+      - name: Find changed TMU files
+        uses: tj-actions/changed-files@v41
+        id: changed-files
+        with:
+          files: "**/*.tmu"
+
+      - name: Convert TMU to PDF → PNG
+        run: |
+          mkdir -p pdf-output image-output
+          for tmu_file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            # Step 1: TMU → PDF
+            /usr/bin/MoganResearch -headless -c "$tmu_file" "pdf-output/$(basename "$tmu_file").pdf"
+            
+            # Step 2: PDF → PNG
+            python -c "
+            import fitz
+            doc = fitz.open('pdf-output/$(basename "$tmu_file").pdf')
+            for i, page in enumerate(doc):
+                pix = page.get_pixmap(dpi=150)
+                pix.save(f'image-output/$(basename "$tmu_file")_page_{i+1}.png')
+            "
+          done
+
+      - name: Upload images as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: generated-images
+          path: image-output/
+
+      - name: Comment on PR with images
+        uses: actions/github-script@v7
+        env:
+          IMAGE_DIR: "image-output"
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const { owner, repo } = context.repo;
+            const issueNum = context.issue.number;
+            const imageDir = process.env.IMAGE_DIR;
+            
+            let body = "### 📸 文件转换结果\n";
+            const images = fs.readdirSync(imageDir);
+            images.forEach(img => {
+              const imgPath = `${imageDir}/${img}`;
+              const imgData = fs.readFileSync(imgPath).toString('base64');
+              body += `**${img}**:\n![${img}](data:image/png;base64,${imgData})\n\n`;
+            });
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issueNum,
+              body: body
+            });
