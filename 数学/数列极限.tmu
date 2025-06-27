@@ -1,0 +1,34 @@
+<TMU|<tuple|1.0.5|1.2.9.7>>
+
+<style|<tuple|generic|chinese>>
+
+<\body>
+  <strong|<doc-data|<doc-title|数列极限>>>
+
+  <\definition*>
+    设数列 <math|<around*|{|a<rsub|n>|}>> 及实数 <math|a>；若 <math|\<forall\>\<varepsilon\>\<gtr\>0>，<math|\<exists\>N\<in\>N<rsup|+>>，使得当 <math|n\<gtr\>N> 时恒有
+
+    <equation*|\<mid\>a<rsub|n>-a\<mid\>\<less\>\<varepsilon\>>
+
+    则称数列<strong|收敛于 <math|a>>，记作 <math|lim\<nospace\><rsub|n\<rightarrow\>\<infty\>>a<rsub|n>=a>，并称 <math|a> 为数列的<strong|极限>。
+  </definition*>
+
+  <\remark>
+    （几何意义）在数轴上，<math|a<rsub|n>> 最终落入 <math|<around*|(|a-\<varepsilon\>,a+\<varepsilon\>|)>> 内。
+  </remark>
+
+  <\remark>
+    （唯一性）若极限存在则必唯一。
+  </remark>
+
+  <\remark>
+    不收敛的数列称为发散数列（如振荡数列）。
+  </remark>
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|paper>
+    <associate|page-screen-margin|false>
+  </collection>
+</initial>
